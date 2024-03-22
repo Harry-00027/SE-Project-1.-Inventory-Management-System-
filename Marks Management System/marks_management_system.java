@@ -107,7 +107,6 @@ class CentralDatabase {
         }
     }
 
-    // Display sorted marks
     System.out.println("\nFinal Result (Sorted by Total Marks):");
     System.out.println("-----------------------------------------");
     for (int i = 0; i < noOfStudent; i++) {
