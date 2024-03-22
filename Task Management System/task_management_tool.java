@@ -1,5 +1,4 @@
 import java.util.Scanner;
-// Task class representing a single task
 class Task {
     private String description;
     private boolean completed;
@@ -22,8 +21,6 @@ class Task {
         this.completed = b;
     }
 }
-
-// TaskHistory class representing version control for tasks
 class TaskList {
     private Task[] task_list;
     private int count=0;
@@ -46,7 +43,7 @@ class TaskList {
         System.out.print("Enter task index to edit: ");
         int index = scanner.nextInt();
         index-=1;
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         if (index >= 0 && index < capacity &&index<count) {
             System.out.print("Enter new description: ");
             String newDescription = scanner.nextLine();
@@ -62,7 +59,7 @@ class TaskList {
       System.out.print("Enter task index that you completed: ");
       int index = scanner.nextInt();
       index-=1;
-      scanner.nextLine(); // Consume newline
+      scanner.nextLine();
       if (index >= 0 && index < capacity &&index<count) {
           task_list[index].setCompleted(true);
           System.out.println("Congratulation for Task("+task_list[index].getDescription()+") Completion");
@@ -99,14 +96,12 @@ class TaskManager {
         Scanner scanner = new Scanner(System.in);
         TaskList task_list;
         Task task;
-        int numTasks = 0;
 
         System.out.println("\nWelcome to Task Manager!");
         System.out.println("--------------------------");
         System.out.print("Enter the number of tasks: ");
         int capacity = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
-        //task = new Task();
+        scanner.nextLine();
         task_list = new TaskList(capacity);
 
         while (true) {
@@ -118,7 +113,7 @@ class TaskManager {
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
